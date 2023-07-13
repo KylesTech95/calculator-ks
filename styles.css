@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Agdasima&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Agdasima', sans-serif;
+}
+
+/*Centering the content*/
+body{
+    width: 100%;
+}
+#wrapper{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+/*Centering the content*/
+
+/*calculator's outter shell*/
+.cal-container{
+    width: 450px;
+    box-shadow: 0px 0px 9px .5px #4b4545a8;
+    z-index:999;
+}
+/*calculator actual*/
+.cal-actual{
+    box-shadow: inset 0px 0px 12px .75px #4b4545a8;
+    /*Flexing 2 divs - 1).display-container & 2).keypad-container*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    background: silver;
+    padding: 2rem 0;
+    border-radius: 4px;
+}
+.cal-display-container{
+    border-radius: 8px;
+    box-shadow: 0px 0px 2px .25px rgb(148, 148, 148);
+}
+/*Display actual*/
+.cal-display-container>.display-actual{
+height: 50px;
+width: 400px;
+border-radius: 8px;
+border: none;
+box-shadow: inset 0px 0px 1.5px .5px #4b4545a8;
+text-align: right;
+padding: 0 2rem;
+font-size: 28px;
+outline: none;
+}
+/*Flexing div.row into 4 columns*/
+.keypad-container{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+/*Flexing span.btn into 1 row*/
+.row{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 0;
+    width: 75%;
+}
+/*styling each button*/
+.btn{
+    border: none;
+    text-align: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    box-shadow: 1.5px 1.5px 8px .5px #4b454574;
+    font-family: 'Agdasima', sans-serif;
+    transition: .25s ease;
+}
+/*spacial styling for .long class (Del & =)*/
+.long{
+    width: 33%;
+    margin-top: 1rem;
+    letter-spacing: 1.25px;
+}
+/*Hovering over button*/
+.btn:hover{
+transition: .25s ease;
+background: #4b454574;
+color: silver;
+transform: scale(1.1);
+cursor: pointer;
+text-shadow: 0px 0px .5px #fff;
+}
+
+/**/
+.board{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    max-width: 600px;
+    padding: 0 1rem;
+    background: #000;
+    color: silver;
+    font-size: 60px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0 8px 8px 0;
+    box-shadow: 1.5px 1.5px 8px .5px #4b454574;
+    text-shadow: .75px .75px 5px lime;
+    letter-spacing: 2px;
+    transition: .5s ease;
+}
+
+@media screen and (max-width:995px){
+    .board{
+        height: 100px;
+        transition: .5s ease;
+    }
+}
+div.instructions{
+    position: absolute;
+    top: 0;
+    right: 0;
+    text-align:center;
+    margin: 1rem 2rem;
+  }
+  .instructions>h3{
+    font-size: 30px;
+    text-decoration: underline;
+  }
+  ul.contain{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .list-item{
+    list-style: none;
+    font-size: 20px;
+  }
+  

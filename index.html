@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+<body>
+    <!-- Wrapper - display: flex -->
+    <div id="wrapper">
+        <div class="cal-container">
+            <div class="cal-actual">
+                <!-- Flex item 1 -->
+                <div class="cal-display-container">
+                    <input onkeydown="return false;" type="text" name="display" class="display-actual">
+                </div> 
+                <!-- Flex item 2  -->
+                <div class="keypad-container">
+                    <div class="row">
+                        <span class="btn">7</span>
+                        <span class="btn">8</span>
+                        <span class="btn">9</span>
+                        <span class="btn">*</span>
+                    </div>
+                    <div class="row">
+                        <span class="btn">4</span>
+                        <span class="btn">5</span>
+                        <span class="btn">6</span>
+                        <span class="btn">/</span>
+                    </div>
+                    <div class="row">
+                        <span class="btn">1</span>
+                        <span class="btn">2</span>
+                        <span class="btn">3</span>
+                        <span class="btn">-</span>
+                    </div>
+                    <div class="row">
+                        <span class="btn">.</span>
+                        <span class="btn">0</span>
+                        <span class="btn">AC</span>
+                        <span class="btn">+</span>
+                    </div>
+                    <div class="row">
+                        <span class="btn long">DELETE</span>
+                        <span class="btn long">=</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <p class="board"></p>
+    <div class="instructions">
+        <h3>Keyboard keys:</h3>
+        <ul class="contain">
+          <li class="list-item">c: clear</li>
+          <li class="list-item">Backspace : Deletes Character</li>
+          <li class="list-item">Enter,=: submit</li>
+          <li class="list-item">0 - 9 : numbers</li>
+          <li class="list-item">/,+,-,* : operators</li>
+        </ul>
+      </div>
+</body>
+<script src="main.js"></script>
+</html>
