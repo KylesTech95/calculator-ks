@@ -13,7 +13,7 @@
             <div class="cal-actual">
                 <!-- Flex item 1 -->
                 <div class="cal-display-container">
-                    <input onkeydown="return false;" type="text" name="display" id="display" class="display-actual">
+                    <input onkeydown="return false;" type="text" name="display" id="display" class="display-actual" autocomplete="off">
                 </div> 
                 <!-- Flex item 2  -->
                 <div class="keypad-container">
@@ -41,7 +41,8 @@
                         <span id="clear" class="btn">AC</span>
                         <span id="add" class="btn">+</span>
                     </div>
-                    <div class="row">
+                    <div class="row end">
+                        <span class="btn long">NEG</span>
                         <span class="btn long">DELETE</span>
                         <span id="equals" class="btn long">=</span>
                     </div>

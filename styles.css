@@ -175,3 +175,7 @@ div.instructions{
     font-size: 20px;
   }
   
+  .end{
+    display: flex;
+    gap: 1.5rem;
+  }
