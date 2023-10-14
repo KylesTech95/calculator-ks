@@ -2,15 +2,13 @@ let btns = document.querySelectorAll('.btn'),
     display = document.querySelector('.display-actual'),
     board = document.querySelector('.board');
 
-
 //Looping throught the btns array
 btns.forEach(btn => {
     //Event listener to click buttons
     btn.addEventListener('click',(e)=>{
         if(display.value=='0')display.value=''
-        e.preventDefault();
         var chr = e.target.innerHTML;
-        if(/\./.test(chr) && oneDecimal(display.value)){
+        if(/\./.test(chr)){
             display.value += chr;
         }
         //Regex.test(string) - condition for programming chrs, deleting chrs & All Clear(AC)
@@ -31,7 +29,11 @@ btns.forEach(btn => {
             //Helper function to evaluate
             display.value = eval(display.value);
             board.innerHTML = eval(display.value);
+            
         }
+        //regex to ensure possible decimals are limited to no more than 1.
+        display.value = display.value.replace(/\.{2,}/g,'.')
+        display.value = display.value.replace(/\.(\d+)\./g,'$1')//start here
     })
 })
 //Event listener to detect keys
@@ -55,4 +57,11 @@ if(/\./.test(e.key)){
         board.innerHTML='0'
 }
     if(e.key=='Backspace') display.value = display.value.slice(0,-1)
+    
+//regex to ensure possible decimals are limited to no more than 1.
+display.value = display.value.replace(/\.{2,}/g,'.')
+display.value = display.value.replace(/\.(\d+)\./g,'$1')
+
+
 })
+
