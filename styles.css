@@ -17,6 +17,7 @@ body{
     align-items: center;
     justify-content: space-evenly;
     min-height: 100vh;
+    margin-left:8rem;
 }
 /*Centering the content*/
 
@@ -146,6 +147,7 @@ div.instructions{
         flex-direction: column-reverse;
         justify-content: center;
         gap: 5rem;
+        margin-left:0;
     }
     .board{
         height: 100px;
