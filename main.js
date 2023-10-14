@@ -84,6 +84,7 @@ window.addEventListener('keydown',(e)=>{
     if(e.key=='Backspace') {display.value = display.value.slice(0,-1)}
     if(e.key=='n'){
         display.value = display.value.replace(/\d+$/,n=>(+n*-1).toString())
+                                     .replace(/--/g,'-')
     }
     if(e.key=='.'){
         display.value = display.value.replace(/([(0-9)*|\.{1}])(\+|\-|\/|\*)(\+|\-|\/|\*)([(0-9)*|\.{1}])/g,'$1\s$2\s$3')
