@@ -122,7 +122,7 @@ text-shadow: 0px 0px .5px #fff;
     box-shadow: 1.5px 1.5px 8px .5px #4b454574;
     text-shadow: .75px .75px 5px lime;
     letter-spacing: 2px;
-    transition: .5s ease;
+    transition: .75s ease;
 }
 
 
@@ -150,8 +150,8 @@ div.instructions{
         margin-left:0;
     }
     .board{
-        height: 100px;
-        transition: .5s ease;
+        height: 125px;
+        transition: .1s ease;
     }
     div.instructions{
         width: 100%;
