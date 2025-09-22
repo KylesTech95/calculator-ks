@@ -142,7 +142,9 @@ div.instructions{
   }
 
   @media screen and (max-width:995px){
-    
+    .cal-container{
+        transform:scale(.77) translate(0,-140px);
+    }
     #wrapper{
         flex-direction: column-reverse;
         justify-content: center;
